@@ -1,4 +1,3 @@
 #!/usr/bin/python3
-for char_code in range(ord("z"), ord("A") - 1, -1):
-        char = chr(char_code)
-        print(char, end="")
+for i in range(122, 96, -1):
+    print(chr(i) if i % 2 == 0 else chr(i-32), end='')

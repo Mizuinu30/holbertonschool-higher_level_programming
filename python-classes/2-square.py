@@ -1,6 +1,10 @@
 #!/usr/bin/python3
+"""This module contains a square class"""
+
 
 class Square:
+    """A class to represent a square."""
+
     def __init__(self, size=0):
         """Initialize the square with a given size.
 

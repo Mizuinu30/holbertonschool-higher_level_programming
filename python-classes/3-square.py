@@ -1,12 +1,12 @@
 #!/usr/bin/python3
-# This module contains a square class
+"""This module contains a square class"""
 
 
 class Square:
-    # This class defines a square
+    """This class defines a square"""
 
     def __init__(self, size=0):
-        # initializes the data
+        """initializes th9e data"""
         if not isinstance(size, int):
             raise TypeError("size must be an int")
         elif size < 0:
@@ -15,5 +15,5 @@ class Square:
             self.__size = size
 
     def area(self):
-        # generates the area
+        """generates the area"""
         return self.__size ** 2

@@ -70,3 +70,6 @@ ValueError: cannot convert float NaN to integer
 >>> add_integer(, b)
 Traceback (most recent call last):
 SyntaxError: invalid syntax
+>>> add_integer()
+Traceback (most recent call last):
+TypeError: add_integer() missing 1 required positional argument: 'a'

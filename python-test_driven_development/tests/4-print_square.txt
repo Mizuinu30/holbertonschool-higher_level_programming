@@ -21,8 +21,7 @@ Write a function that prints My name is <first name> <last name>
 >>> size = None
 >>> print_square(size)
 Traceback (most recent call last):
-  File "<stdin>", line 1, in <module>
-  File "<stdin>", line 6, in print_square
+    ...
 TypeError: size must be an integer
 >>> size = 0
 >>> print_square(size)
@@ -30,12 +29,14 @@ TypeError: size must be an integer
 >>> size = -1
 >>> print_square(size)
 Traceback (most recent call last):
-  File "<stdin>", line 1, in <module>
-  File "<stdin>", line 8, in print_square
+    ...
 ValueError: size must be >= 0
 >>> size = -13.5
 >>> print_square(size)
 Traceback (most recent call last):
-  File "<stdin>", line 1, in <module>
-  File "<stdin>", line 6, in print_square
+    ...
 TypeError: size must be an integer
+>>> print_square()
+Traceback (most recent call last):
+    ...
+ TypeError: print_square() missing 1 required positional argument: 'size'

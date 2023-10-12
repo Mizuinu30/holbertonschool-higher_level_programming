@@ -37,7 +37,7 @@ Traceback (most recent call last):
   File "<stdin>", line 3, in add_integer
 TypeError: a must be an integer
 >>> a = float("inf")
->>> b = 10
+>>> b = float("-inf")
 >>> add_integer(a, b)
 Traceback (most recent call last):
   File "<stdin>", line 1, in <module>
@@ -55,3 +55,15 @@ TypeError: a must be an integer
 Traceback (most recent call last):
     ...
 TypeError: b must be an integer
+>>> add_integer(9999999999999e999999999993**54444444444444444444444, 5)
+Traceback (most recent call last):
+    ...
+OverflowError: cannot convert float infinity to integer
+>>> add_integer(9999999999999e244**999, 5)
+Traceback (most recent call last):
+OverflowError: (34, 'Numerical result out of range')
+>>> a = float("NaN")
+>>> b = 98
+>>> add_integer(a, b)
+Traceback (most recent call last):
+ValueError: cannot convert float NaN to integer

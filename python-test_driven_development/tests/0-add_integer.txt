@@ -38,10 +38,10 @@ TypeError: a must be an integer
 Traceback (most recent call last):
   ...
 TypeError: a must be an integer
->>> add_integer(a=98, None)
+>>> add_integer(a=98, b=None)
 Traceback (most recent call last):
   ...
-SyntaxError: positional argument follows keyword argument
+TypeError: b must be an integer
 >>> a = float("inf")
 >>> b = 10
 >>> add_integer(a, b)

@@ -12,7 +12,7 @@ Write a function that adds 2 integers.
     Returns an integer: the addition of a and b
     You are not allowed to import any module
 
->>> add_integer = __import__('1-add_integer').add_integer
+>>> add_integer = __import__('0-add_integer').add_integer
 >>> add_integer(3, 5)
 8
 >>> add_integer(3.5, 5)
@@ -43,7 +43,7 @@ Traceback (most recent call last):
   File "<stdin>", line 1, in <module>
   File "<stdin>", line 8, in add_integer
 OverflowError: cannot convert float infinity to integer
->>> add_integer(a=0, b=0)
+>>> add_integer(a=None, b=0)
 Traceback (most recent call last):
     ...
 TypeError: a must be an integer

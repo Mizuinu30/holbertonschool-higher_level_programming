@@ -67,3 +67,6 @@ OverflowError: (34, 'Numerical result out of range')
 >>> add_integer(a, b)
 Traceback (most recent call last):
 ValueError: cannot convert float NaN to integer
+>>> add_integer(, b)
+Traceback (most recent call last):
+SyntaxError: invalid syntax

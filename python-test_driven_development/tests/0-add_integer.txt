@@ -33,6 +33,15 @@ TypeError: b must be an integer
 Traceback (most recent call last):
  ...
 TypeError: a must be an integer
+
+>>> add_integer(None, b=98)
+Traceback (most recent call last):
+  ...
+TypeError: a must be an integer
+>>> add_integer(a=98, None)
+Traceback (most recent call last):
+  ...
+SyntaxError: positional argument follows keyword argument
 >>> a = float("inf")
 >>> b = 10
 >>> add_integer(a, b)

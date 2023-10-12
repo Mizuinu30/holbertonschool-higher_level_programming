@@ -22,14 +22,12 @@ def add_integer(a, b=98):
     >>> add_integer(None)
     Traceback (most recent call last): ...
     """
-    if not (isinstance(a, (int, float)) and isinstance(b, (int, float))):
-        raise TypeError("a must be an integer or b must be an integer")
-
-    # Cast a and b to integers if they are floats
-    if isinstance(a, float):
+    if type(a) is not int and type(a) is not float:
+        raise TypeError("a must be an integer")
+    if type(b) is not int and type(b) is not float:
+        raise TypeError("b must be an integer")
+    if type(a) is float:
         a = int(a)
-    if isinstance(b, float):
+    if type(b) is float:
         b = int(b)
-
-    # Perform the addition and return the result as an integer
-    return int(a + b)
+    return (a + b)

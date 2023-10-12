@@ -100,9 +100,9 @@ TypeError: matrix must be a matrix (list of lists) of integers/floats
 >>> len(matrix_divided(matrix, div)) == len(matrix)
 True
 >>>
->>> matrix = ["8", ]
+>>> matrix = [None, [5, 3]]
 >>> div = 2
 >>> matrix_divided(matrix, div)
 Traceback (most recent call last):
   ...
-TypeError: matrix must be a matrix (list of lists) of integers/floats
+TypeError: object of type 'NoneType' has no len()

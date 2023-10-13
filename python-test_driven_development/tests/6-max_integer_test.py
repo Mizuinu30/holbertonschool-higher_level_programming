@@ -15,10 +15,10 @@ def max_integer(list=[]):
 
     if len(list) == 0:
         return None
-    max = list[0]
+    result = list[0]
     i = 1
     while i < len(list):
         if list[i] > max:
-            max = list[i]
+            result = list[i]
         i += 1
-    return max
+    return result

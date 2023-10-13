@@ -51,7 +51,7 @@ es:
 <BLANKLINE>
 Silva.
 <BLANKLINE>
->>> text_indentation(first_name, )
+>>> text_indentation(first_name, None)
 Traceback (most recent call last):
     ...
 NameError: name 'first_name' is not defined

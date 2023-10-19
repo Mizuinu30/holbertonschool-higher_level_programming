@@ -1,6 +1,4 @@
 #!/usr/bin/python3
-"""Module 9-rectangle"""
-#!/usr/bin/python3
 """Write a class Rectangle that inherits from BaseGeometry"""
 
 

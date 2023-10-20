@@ -1,5 +1,10 @@
 #!/usr/bin/python3
-"""Module adds all arguments to a Python list,and then save them to a file"""
+"""Write a script that adds all arguments to a Python list,
+and then save them to a file:
+You must use your function save_to_json_file from 5-save_to_json_file.py
+You must use your function load_from_json_file from 6-load_from_json_file.py
+The list must be saved as a JSON representation in a file named add_item.json
+"""
 
 
 from sys import argv

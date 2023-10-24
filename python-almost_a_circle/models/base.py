@@ -1,6 +1,6 @@
 #!/usr/bin/python3
+"""This module defines the Base class."""
 
-# models/base.py
 
 class Base:
     """Represent the base model.

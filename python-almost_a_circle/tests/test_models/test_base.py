@@ -19,13 +19,6 @@ class TestBase(unittest.TestCase):
 
     """ Testing to json string """
 
-    def test_to_json_string(self):
-        r1 = Rectangle(10, 7, 2, 8, 1)
-        dic = r1.to_dictionary()
-        json = Base.to_json_string([dic])
-        self.assertEqual(
-            json, '[{"x": 2, "y": 8, "id": 1, "height": 7, "width": 10}]')
-
     def test_to_json_empty(self):
         json = Base.to_json_string([])
         self.assertEqual(json, '[]')

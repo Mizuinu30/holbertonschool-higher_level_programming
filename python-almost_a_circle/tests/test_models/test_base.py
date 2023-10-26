@@ -1,16 +1,12 @@
-#!/usr/bin/python3
-""" Test for base class """
-
 from models.base import Base
 from models.rectangle import Rectangle
 import unittest
 
 
 class TestBase(unittest.TestCase):
-    """ Test for initialization """
+    """ Testing  initialization """
 
     def test_init(self):
-        """ Test for initialization """
         new_obj = Base()
         self.assertEqual(new_obj._Base__nb_objects, 1)
         self.assertEqual(new_obj.id, 1)
@@ -21,11 +17,9 @@ class TestBase(unittest.TestCase):
         self.assertEqual(new_obj_3._Base__nb_objects, 2)
         self.assertEqual(new_obj_3.id, 89)
 
-    """ Test for json string """
+    """ Testing to json string """
 
     def test_to_json_string(self):
-        """ Test for json string
-        """
         r1 = Rectangle(10, 7, 2, 8, 1)
         dic = r1.to_dictionary()
         json = Base.to_json_string([dic])
@@ -33,30 +27,24 @@ class TestBase(unittest.TestCase):
             json, '[{"x": 2, "y": 8, "id": 1, "height": 7, "width": 10}]')
 
     def test_to_json_empty(self):
-        """ Test for json string empty"""
         json = Base.to_json_string([])
         self.assertEqual(json, '[]')
 
     def test_to_json_none(self):
-        """ Test for json string none"""
         json = Base.to_json_string(None)
         self.assertEqual(json, '[]')
 
-    """ Test from json to string """
+    """ Testing from json to string """
 
     def test_json_srting(self):
-        """ Test for json string """
         json = Base.from_json_string(None)
         self.assertEqual(json, [])
 
     def test_json_str(self):
-        """ Test for json string"""
         json = Base.from_json_string("[]")
         self.assertEqual(json, [])
 
     def test_json_str_good(self):
-        """ Test for json string good
-        """
         list_input = [
             {'id': 89, 'width': 10, 'height': 4},
             {'id': 7, 'width': 1, 'height': 7}
@@ -66,12 +54,10 @@ class TestBase(unittest.TestCase):
         self.assertIsInstance(json_output, list)
 
     def test_json_str_empty(self):
-        """ Test for json string empty"""
         json = Base.from_json_string(None)
         self.assertEqual(json, [])
 
     def test_json_str_empty_2(self):
-        """ Test for json string empty"""
         json = Base.from_json_string("[]")
         self.assertEqual(json, [])
 

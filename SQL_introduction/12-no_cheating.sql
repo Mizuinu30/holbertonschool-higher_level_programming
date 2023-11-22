@@ -4,4 +4,4 @@ UPDATE
 SET
     score = 10
 WHERE
-    name = 'Bob';
+    second_table name = 'Bob';

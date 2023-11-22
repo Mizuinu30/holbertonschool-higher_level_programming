@@ -1,8 +1,12 @@
--- Select with 2 LEFT JOIN return NULL
+-- Import the database dump from hbtn_0d_tvshows to your MySQL server: download
+-- Write a script that lists all shows, and all genres linked to that show, from the database hbtn_0d_tvshows.
+SELECT
+    tv_shows.title,
+    tv_genres.name
 FROM
-    tv_shows A
-    LEFT JOIN tv_show_genres B ON A.id = B.show_id
-    LEFT JOIN tv_genres C ON B.genre_id = C.id
+    tv_shows
+    LEFT JOIN tv_show_genres ON tv_shows.id = tv_show_genres.show_id
+    LEFT JOIN tv_genres ON tv_genres.id = tv_show_genres.genre_id
 ORDER BY
-    1,
-    2 ASC;
+    tv_shows.title,
+    tv_genres.name;

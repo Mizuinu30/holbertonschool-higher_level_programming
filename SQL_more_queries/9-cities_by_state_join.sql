@@ -4,7 +4,7 @@ Select
     a.name AS name,
     b.name AS name
 FROM
-    cities a
-    inner join states b ON a.state_id = b.id
+    cities
+    INNER JOIN states ON cities.state_id = states.id
 ORDER BY
-    a.id ASC;
+    acities.id ASC;

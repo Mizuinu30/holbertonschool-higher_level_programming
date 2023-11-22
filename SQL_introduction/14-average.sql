@@ -1,6 +1,6 @@
 --a script that computes the score average of all records in the table
 SELECT
-    AVG(score)
+    AVG(score) AS average_score
 FROM
     second_table;
 

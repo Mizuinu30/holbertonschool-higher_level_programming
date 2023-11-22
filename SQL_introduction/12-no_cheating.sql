@@ -1,7 +1,8 @@
--- Script to update a specific record in a table in a MySQL database.
+-- update data
+-- Execute: cat 12-no_cheating.sql | mysql -hlocalhost -uroot -p hbtn_0c_0
 UPDATE
-    second_table
+    `second_table`
 SET
-    score = 10
+    `score` = 10
 WHERE
-    second_table name = 'Bob';
+    `second_table`.`name` = "Bob";

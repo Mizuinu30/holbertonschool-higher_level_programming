@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-
+"""Add a new state"""
 import sys
 from model_state import Base, State
 from sqlalchemy import (create_engine)

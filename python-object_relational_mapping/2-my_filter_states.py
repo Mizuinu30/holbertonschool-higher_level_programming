@@ -1,26 +1,19 @@
-#!/usr/bin/pyhton3
-""" This scrpit returns a filtered states """
-
+#!/usr/bin/python3
+""" This script return filter states """
 if __name__ == '__main__':
     import MySQLdb
     from sys import argv
-
-    try:
-        # Connect to MySQL server
-        db = MySQLdb.connect(host="localhost", port=3306,
-                             user=argv[1], passwd=argv[2], db=argv[3])
-
-        # Create a cursor to execute queries
-        cur = db.cursor()
-
-        # Execute the query to retrieve states
-        cur.execute(
-            """SELECT * FROM states WHERE name LIKE BINARY "N%" ORDER BY id""")
-
-        # Fetch all the rows and print the results
-        rows = cur.fetchall()
-        for row in rows:
-            print(row)
-
-    except MySQLdb.Error as e:
-        print("Error connecting to database: {}".format(e))
+    db = MySQLdb.connect(host="localhost",
+                         port=3306,
+                         user=argv[1],
+                         passwd=argv[2],
+                         db=argv[3])
+    cur = db.cursor()
+    cur.execute("""SELECT * FROM states
+                WHERE name LIKE BINARY '{}'
+                ORDER BY id""".format(argv[4]))
+    rows = cur.fetchall()
+    for row in rows:
+        print(row)
+    cur.close()
+    db.close()

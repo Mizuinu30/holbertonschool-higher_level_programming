@@ -38,7 +38,7 @@ No known bugs at this time.
 ## Authors
 Juan Silva - [Github](https://github.com/Mizuinu30) / [X](https://twitter.com/Juanraplants)
 
-Second part of Airbnb: Joann Vuong
+
 ## License
 Public Domain. No copy write protection.
 
